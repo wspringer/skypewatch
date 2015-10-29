@@ -3,6 +3,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
 @interface Observer : NSObject
 
 - (void)observeNotification:(NSNotification*)note;
