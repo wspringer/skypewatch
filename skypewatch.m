@@ -15,7 +15,8 @@
 
 - (void)observeNotification:(NSNotification*)note
 {
-  NSLog(@"%@", note.userInfo[@"SKYPE_API_NOTIFICATION_STRING"]);
+  printf("%s\n", [note.userInfo[@"SKYPE_API_NOTIFICATION_STRING"] UTF8String]);
+  fflush(stdout);
 }
 
 @end
